@@ -76,7 +76,15 @@ module Blogo::Admin
     #
     # @return [Hash]
     def post_params
-      params.require(:post).permit(:title, :permalink, :published_at, :raw_content, :published, :tags_string, :push_time)
+      params.require(:post).permit(:title,
+                                   :permalink,
+                                   :published_at,
+                                   :raw_content,
+                                   :published,
+                                   :tags_string,
+                                   :push_time,
+                                   :need_push
+                                  )
     end
   end
 end
